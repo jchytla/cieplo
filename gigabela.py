@@ -3,8 +3,8 @@ import numpy as np
 
 N=np.zeros((72,72))
 
-for x in range (72):
-    for y in range (72):
+for x in range (1,71):
+    for y in range (1,71):
         if x<=20 and y<=23:
             N[x,y]=-2
         elif x>=36 and y<=23:
@@ -79,14 +79,14 @@ Indeksy_pokoj_2=[i for i in range(72**2) if Indeksy[i]==-2]
 Indeksy_pokoj_3=[i for i in range(72**2) if Indeksy[i]==-3]
 Indeksy_pokoj_4=[i for i in range(72**2) if Indeksy[i]==-4]
 Indeksy_pokoj_5=[i for i in range(72**2) if Indeksy[i]==-5]
-print(len(Indeksy_pokoj_1))
-print(len(Indeksy_pokoj_2))
-print(len(Indeksy_pokoj_3))
-print(len(Indeksy_pokoj_4))
-print(len(Indeksy_pokoj_5))
-print(len(Indeksy_pokoj_5)+len(Indeksy_pokoj_4)+len(Indeksy_pokoj_3)+len(Indeksy_pokoj_2)+len(Indeksy_pokoj_1))
+#print(len(Indeksy_pokoj_1))
+#print(len(Indeksy_pokoj_2))
+#print(len(Indeksy_pokoj_3))
+#print(len(Indeksy_pokoj_4))
+#print(len(Indeksy_pokoj_5))
+#print(len(Indeksy_pokoj_5)+len(Indeksy_pokoj_4)+len(Indeksy_pokoj_3)+len(Indeksy_pokoj_2)+len(Indeksy_pokoj_1))
 
 
-plt.imshow(N,origin='lower')
-plt.title("Układ grzejników w mieszkaniu: opcja 1")
-plt.show()
+#plt.imshow(N,origin='lower')
+#plt.title("Układ grzejników w mieszkaniu: opcja 1")
+#plt.show()

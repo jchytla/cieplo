@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.ticker as mticker
 
 N=np.zeros((72,72))
 
@@ -53,5 +54,6 @@ for i in range (72):
             N[i,j]=np.nan
 
 plt.imshow(N,origin='lower')
+plt.colorbar(ticks=np.arange(1,6,1), format=mticker.FixedFormatter(["lewe","prawe","dolne","górne","okna"]))
 plt.title("Podział ścian")
 plt.show()

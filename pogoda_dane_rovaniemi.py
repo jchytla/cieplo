@@ -38,7 +38,7 @@ if response.status_code == 200:
     plt.plot(hours, mid_temperatures[0:8], marker='o', color='red', label='Średnia z 5 dni')
     plt.xlabel('Godzina')
     plt.ylabel('Temperatura (°C)')
-    plt.title('Temperatura powietrza w dniach 27.12-31.12 w Rovaniemi')
+    plt.title('Temperatura powietrza w dniach 21.01-25.01 w Rovaniemi')
     plt.xticks(range(0,24,3))
     plt.grid()
     plt.legend()

@@ -8,7 +8,7 @@ from math import floor
 api_key = "b70f2d076abc2f0572fc142cbe0f34f2"
 
 # Parametry zapytania
-city = "Wrocław"
+city = "Bodo"
 url = f"http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric"
 
 # Wysyłamy zapytanie do API
@@ -38,7 +38,7 @@ if response.status_code == 200:
     plt.plot(hours, mid_temperatures[0:8], marker='o', color='red', label='Średnia z 5 dni')
     plt.xlabel('Godzina')
     plt.ylabel('Temperatura (°C)')
-    plt.title('Temperatura powietrza w dniach 21.01-25.01 we Wrocławiu')
+    plt.title('Temperatura powietrza w dniach 21.01-25.01 w Bodo')
     plt.xticks(range(0,24,3))
     plt.grid()
     plt.legend()
@@ -46,19 +46,6 @@ if response.status_code == 200:
     print(temperatures)
     print(hours)
 
-
-    temperatury=[0]*24*60
-    mid_temperatures+=[mid_temperatures[0]]
-
-    for t in range(24*60):
-        temperatury[t]=mid_temperatures[floor(t/180)]*(180-t%180)/180 + mid_temperatures[floor(t/180)+1]*(t%180)/180 
-    plt.plot(temperatury)
-    plt.xlabel('Czas (min)')
-    plt.ylabel('Temperatura (°C)')
-    plt.title('Temperatura powietrza w dniach 27.12-31.12 we Wrocławiu')
-    plt.xticks(range(0,24*60,180))
-    plt.grid()
-    plt.show()
 
 else:
     print(f"Błąd pobierania danych: {response.status_code}")
