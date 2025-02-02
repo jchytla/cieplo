@@ -17,7 +17,7 @@ k=len(T)//M+1
 print(k)
 X,Y=np.meshgrid(X,X)
 
-temp=read_csv("temperatury_rovaniemi_okna.csv", delimiter=",",header=None)
+temp=read_csv("csvki/temperatury_rovaniemi_okna.csv", delimiter=",",header=None)
 temp=temp.to_numpy()
 temp=temp.reshape(k,6)
 
@@ -36,10 +36,11 @@ plt.legend()
 plt.show()
 
 
-zuzycie=read_csv("zuzycie_rovaniemi_okna.csv", delimiter=",",header=None)
+zuzycie=read_csv("csvki/zuzycie_rovaniemi_okna.csv", delimiter=",",header=None)
 zuzycie=zuzycie.to_numpy()
 zuzycie=zuzycie.reshape(len(T),6)
 zuzycie=zuzycie[::M,:]
+
 
 
 
